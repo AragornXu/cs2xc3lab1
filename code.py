@@ -1,10 +1,8 @@
 def are_valid_groups(studentNumbers, groups):
-    sns = studentNumbers
-    gs = groups
-    for group in gs:
-        for studentNumber in group:
+    for eachGroup in groups:
+        for eachStudent in eachGroup:
             try:
-                sns.remove(studentNumber)
+                studentNumbers.remove(eachStudent)
             except:
                 return False
-    return len(sns) == 0
+    return len(studentNumbers) == 0
